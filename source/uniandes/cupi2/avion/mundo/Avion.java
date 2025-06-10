@@ -133,6 +133,15 @@ public class Avion
         }
     }
     
+    public Silla darSillaEconomicaLibreEnVentana() {
+    	for(Silla silla : sillasEconomicas) {
+    		if(!silla.sillaAsignada() && silla.darUbicacion() == Ubicacion.VENTANA) {
+    			return silla;
+    		}
+    	}
+    	return null;
+    }
+    
     public Silla asignarSilla( Clase pClase, Ubicacion pUbicacion, Pasajero pPasajero )
     {
         // busca una silla libre
