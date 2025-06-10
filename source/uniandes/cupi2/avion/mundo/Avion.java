@@ -104,18 +104,18 @@ public class Avion
      * @return Silla asignada al pasajero o null si no se pudo asignar una silla al pasajero en la ubicación y clase especificados.
      */
     
-    public Silla darClaseConMasSillasEnVentanaOcupadas() {
-    	int sillasEnVentanasEjecutivas = 0;
-    	int sillasEnVentanasEconomicas = 0;
-    	
-    	
-    	for(Silla silla : sillasEjecutivas) {
+    public Clase darClaseConMasSillasEnVentanaOcupadas() {
+        int sillasVentanaEjecutivas = 0;
+        int sillasVentanaEconomicas = 0;
+        
+        // Contar sillas ventana ocupadas en ejecutiva
+        for(Silla silla : sillasEjecutivas) {
             if(silla.darUbicacion() == Ubicacion.VENTANA && silla.sillaAsignada()) {
                 sillasVentanaEjecutivas++;
             }
         }
         
-    	
+        // Contar sillas ventana ocupadas en económica
         for(Silla silla : sillasEconomicas) {
             if(silla.darUbicacion() == Ubicacion.VENTANA && silla.sillaAsignada()) {
                 sillasVentanaEconomicas++;  
