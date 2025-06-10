@@ -107,6 +107,20 @@ public class Avion
     public Silla darClaseConMasSillasEnVentanaOcupadas() {
     	int sillasEnVentanasEjecutivas = 0;
     	int sillasEnVentanasEconomicas = 0;
+    	
+    	
+    	for(Silla silla : sillasEjecutivas) {
+            if(silla.darUbicacion() == Ubicacion.VENTANA && silla.sillaAsignada()) {
+                sillasVentanaEjecutivas++;
+            }
+        }
+        
+    	
+        for(Silla silla : sillasEconomicas) {
+            if(silla.darUbicacion() == Ubicacion.VENTANA && silla.sillaAsignada()) {
+                sillasVentanaEconomicas++;  
+            }
+        }
     }
     
     public Silla asignarSilla( Clase pClase, Ubicacion pUbicacion, Pasajero pPasajero )
