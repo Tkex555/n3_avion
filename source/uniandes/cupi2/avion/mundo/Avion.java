@@ -121,6 +121,16 @@ public class Avion
                 sillasVentanaEconomicas++;  
             }
         }
+        
+        if(sillasVentanaEjecutivas > sillasVentanaEconomicas) {
+            return Clase.EJECUTIVA;
+        }
+        else if(sillasVentanaEconomicas > sillasVentanaEjecutivas) {
+            return Clase.ECONOMICA;
+        }
+        else {
+            return null;
+        }
     }
     
     public Silla asignarSilla( Clase pClase, Ubicacion pUbicacion, Pasajero pPasajero )
