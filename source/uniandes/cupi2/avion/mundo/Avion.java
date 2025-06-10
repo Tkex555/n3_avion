@@ -103,6 +103,12 @@ public class Avion
      * @param pPasajero Pasajero a asignar. pPasajero != null y no tiene silla en el avión.
      * @return Silla asignada al pasajero o null si no se pudo asignar una silla al pasajero en la ubicación y clase especificados.
      */
+    
+    public Silla darClaseConMasSillasEnVentanaOcupadas() {
+    	int sillasEnVentanasEjecutivas = 0;
+    	int sillasEnVentanasEconomicas = 0;
+    }
+    
     public Silla asignarSilla( Clase pClase, Ubicacion pUbicacion, Pasajero pPasajero )
     {
         // busca una silla libre
